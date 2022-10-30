@@ -4,7 +4,7 @@ from dash import Dash, callback, html, Input, Output
 app = Dash(__name__)
 
 app.layout = html.Div([
-    dti.IconSun(size=16),
+    dti.IconBrandAmazon(size=16),
 ])
 
 

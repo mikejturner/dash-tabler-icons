@@ -1,0 +1,9 @@
+{{#icons}}
+import {{this}} from "./components/{{this}}";
+{{/icons}}
+
+export {
+{{#icons}}
+    {{this}},
+{{/icons}}
+};
