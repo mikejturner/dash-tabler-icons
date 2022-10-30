@@ -1,21 +1,12 @@
-import dash_tabler_icons
+import dash_tabler_icons as dti
 from dash import Dash, callback, html, Input, Output
 
 app = Dash(__name__)
 
 app.layout = html.Div([
-    dash_tabler_icons.DashTablerIcons(
-        id='input',
-        value='my-value',
-        label='my-label'
-    ),
-    html.Div(id='output')
+    dti.IconSun(size=16),
 ])
 
-
-@callback(Output('output', 'children'), Input('input', 'value'))
-def display_output(value):
-    return 'You have entered {}'.format(value)
 
 
 if __name__ == '__main__':

@@ -1,3 +1,14 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+export(dtiIconAlertCircle)
+export(dtiIconAward)
+export(dtiIconBug)
+export(dtiIconDatabase)
+export(dtiIconGitPullRequest)
+export(dtiIconGraph)
+export(dtiIconMessages)
+export(dtiIconMoonStars)
+export(dtiIconPennant)
+export(dtiIconSettings)
+export(dtiIconSun)
 export(dtiDashTablerIcons)

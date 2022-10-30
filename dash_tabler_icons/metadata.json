@@ -1,37 +1,860 @@
 {
-  "src/lib/components/DashTablerIcons.react.js": {
-    "description": "ExampleComponent is an example component.\nIt takes a property, `label`, and\ndisplays it.\nIt renders an input with the property `value`\nwhich is editable by the user.",
-    "displayName": "DashTablerIcons",
-    "methods": [],
+  "src/ts/components/IconAlertCircle.tsx": {
+    "displayName": "IconAlertCircle",
+    "description": "",
     "props": {
+      "size": {
+        "description": "Icon size",
+        "required": false,
+        "defaultValue": {
+          "value": "24",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "color": {
+        "description": "Icon color",
+        "required": false,
+        "defaultValue": {
+          "value": "'currentColor'",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "stroke": {
+        "description": "Stroke width",
+        "required": false,
+        "defaultValue": {
+          "value": "2",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "className": {
+        "description": "Often used with CSS to style elements with common properties",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "style": {
+        "description": "Inline style",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "any"
+        }
+      },
       "id": {
-        "type": {
-          "name": "string"
-        },
+        "description": "Unique ID to identify this component in Dash callbacks.",
         "required": false,
-        "description": "The ID used to identify this component in Dash callbacks."
-      },
-      "label": {
         "type": {
-          "name": "string"
-        },
-        "required": true,
-        "description": "A label that will be printed when this component is rendered."
-      },
-      "value": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "The value displayed in the input."
+          "name": "string",
+          "raw": "string"
+        }
       },
       "setProps": {
+        "description": "Update props to trigger callbacks.",
+        "required": true,
         "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+          "name": "func",
+          "raw": "(props: Record<string, any>) => void"
+        }
       }
-    }
+    },
+    "isContext": false
+  },
+  "src/ts/components/IconAward.tsx": {
+    "displayName": "IconAward",
+    "description": "",
+    "props": {
+      "size": {
+        "description": "Icon size",
+        "required": false,
+        "defaultValue": {
+          "value": "24",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "color": {
+        "description": "Icon color",
+        "required": false,
+        "defaultValue": {
+          "value": "'currentColor'",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "stroke": {
+        "description": "Stroke width",
+        "required": false,
+        "defaultValue": {
+          "value": "2",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "className": {
+        "description": "Often used with CSS to style elements with common properties",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "style": {
+        "description": "Inline style",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "any"
+        }
+      },
+      "id": {
+        "description": "Unique ID to identify this component in Dash callbacks.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "setProps": {
+        "description": "Update props to trigger callbacks.",
+        "required": true,
+        "type": {
+          "name": "func",
+          "raw": "(props: Record<string, any>) => void"
+        }
+      }
+    },
+    "isContext": false
+  },
+  "src/ts/components/IconBug.tsx": {
+    "displayName": "IconBug",
+    "description": "",
+    "props": {
+      "size": {
+        "description": "Icon size",
+        "required": false,
+        "defaultValue": {
+          "value": "24",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "color": {
+        "description": "Icon color",
+        "required": false,
+        "defaultValue": {
+          "value": "'currentColor'",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "stroke": {
+        "description": "Stroke width",
+        "required": false,
+        "defaultValue": {
+          "value": "2",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "className": {
+        "description": "Often used with CSS to style elements with common properties",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "style": {
+        "description": "Inline style",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "any"
+        }
+      },
+      "id": {
+        "description": "Unique ID to identify this component in Dash callbacks.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "setProps": {
+        "description": "Update props to trigger callbacks.",
+        "required": true,
+        "type": {
+          "name": "func",
+          "raw": "(props: Record<string, any>) => void"
+        }
+      }
+    },
+    "isContext": false
+  },
+  "src/ts/components/IconDatabase.tsx": {
+    "displayName": "IconDatabase",
+    "description": "",
+    "props": {
+      "size": {
+        "description": "Icon size",
+        "required": false,
+        "defaultValue": {
+          "value": "24",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "color": {
+        "description": "Icon color",
+        "required": false,
+        "defaultValue": {
+          "value": "'currentColor'",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "stroke": {
+        "description": "Stroke width",
+        "required": false,
+        "defaultValue": {
+          "value": "2",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "className": {
+        "description": "Often used with CSS to style elements with common properties",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "style": {
+        "description": "Inline style",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "any"
+        }
+      },
+      "id": {
+        "description": "Unique ID to identify this component in Dash callbacks.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "setProps": {
+        "description": "Update props to trigger callbacks.",
+        "required": true,
+        "type": {
+          "name": "func",
+          "raw": "(props: Record<string, any>) => void"
+        }
+      }
+    },
+    "isContext": false
+  },
+  "src/ts/components/IconGitPullRequest.tsx": {
+    "displayName": "IconGitPullRequest",
+    "description": "",
+    "props": {
+      "size": {
+        "description": "Icon size",
+        "required": false,
+        "defaultValue": {
+          "value": "24",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "color": {
+        "description": "Icon color",
+        "required": false,
+        "defaultValue": {
+          "value": "'currentColor'",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "stroke": {
+        "description": "Stroke width",
+        "required": false,
+        "defaultValue": {
+          "value": "2",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "className": {
+        "description": "Often used with CSS to style elements with common properties",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "style": {
+        "description": "Inline style",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "any"
+        }
+      },
+      "id": {
+        "description": "Unique ID to identify this component in Dash callbacks.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "setProps": {
+        "description": "Update props to trigger callbacks.",
+        "required": true,
+        "type": {
+          "name": "func",
+          "raw": "(props: Record<string, any>) => void"
+        }
+      }
+    },
+    "isContext": false
+  },
+  "src/ts/components/IconGraph.tsx": {
+    "displayName": "IconGraph",
+    "description": "",
+    "props": {
+      "size": {
+        "description": "Icon size",
+        "required": false,
+        "defaultValue": {
+          "value": "24",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "color": {
+        "description": "Icon color",
+        "required": false,
+        "defaultValue": {
+          "value": "'currentColor'",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "stroke": {
+        "description": "Stroke width",
+        "required": false,
+        "defaultValue": {
+          "value": "2",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "className": {
+        "description": "Often used with CSS to style elements with common properties",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "style": {
+        "description": "Inline style",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "any"
+        }
+      },
+      "id": {
+        "description": "Unique ID to identify this component in Dash callbacks.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "setProps": {
+        "description": "Update props to trigger callbacks.",
+        "required": true,
+        "type": {
+          "name": "func",
+          "raw": "(props: Record<string, any>) => void"
+        }
+      }
+    },
+    "isContext": false
+  },
+  "src/ts/components/IconMessages.tsx": {
+    "displayName": "IconMessages",
+    "description": "",
+    "props": {
+      "size": {
+        "description": "Icon size",
+        "required": false,
+        "defaultValue": {
+          "value": "24",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "color": {
+        "description": "Icon color",
+        "required": false,
+        "defaultValue": {
+          "value": "'currentColor'",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "stroke": {
+        "description": "Stroke width",
+        "required": false,
+        "defaultValue": {
+          "value": "2",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "className": {
+        "description": "Often used with CSS to style elements with common properties",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "style": {
+        "description": "Inline style",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "any"
+        }
+      },
+      "id": {
+        "description": "Unique ID to identify this component in Dash callbacks.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "setProps": {
+        "description": "Update props to trigger callbacks.",
+        "required": true,
+        "type": {
+          "name": "func",
+          "raw": "(props: Record<string, any>) => void"
+        }
+      }
+    },
+    "isContext": false
+  },
+  "src/ts/components/IconMoonStars.tsx": {
+    "displayName": "IconMoonStars",
+    "description": "",
+    "props": {
+      "size": {
+        "description": "Icon size",
+        "required": false,
+        "defaultValue": {
+          "value": "24",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "color": {
+        "description": "Icon color",
+        "required": false,
+        "defaultValue": {
+          "value": "'currentColor'",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "stroke": {
+        "description": "Stroke width",
+        "required": false,
+        "defaultValue": {
+          "value": "2",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "className": {
+        "description": "Often used with CSS to style elements with common properties",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "style": {
+        "description": "Inline style",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "any"
+        }
+      },
+      "id": {
+        "description": "Unique ID to identify this component in Dash callbacks.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "setProps": {
+        "description": "Update props to trigger callbacks.",
+        "required": true,
+        "type": {
+          "name": "func",
+          "raw": "(props: Record<string, any>) => void"
+        }
+      }
+    },
+    "isContext": false
+  },
+  "src/ts/components/IconPennant.tsx": {
+    "displayName": "IconPennant",
+    "description": "",
+    "props": {
+      "size": {
+        "description": "Icon size",
+        "required": false,
+        "defaultValue": {
+          "value": "24",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "color": {
+        "description": "Icon color",
+        "required": false,
+        "defaultValue": {
+          "value": "'currentColor'",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "stroke": {
+        "description": "Stroke width",
+        "required": false,
+        "defaultValue": {
+          "value": "2",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "className": {
+        "description": "Often used with CSS to style elements with common properties",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "style": {
+        "description": "Inline style",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "any"
+        }
+      },
+      "id": {
+        "description": "Unique ID to identify this component in Dash callbacks.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "setProps": {
+        "description": "Update props to trigger callbacks.",
+        "required": true,
+        "type": {
+          "name": "func",
+          "raw": "(props: Record<string, any>) => void"
+        }
+      }
+    },
+    "isContext": false
+  },
+  "src/ts/components/IconSettings.tsx": {
+    "displayName": "IconSettings",
+    "description": "",
+    "props": {
+      "size": {
+        "description": "Icon size",
+        "required": false,
+        "defaultValue": {
+          "value": "24",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "color": {
+        "description": "Icon color",
+        "required": false,
+        "defaultValue": {
+          "value": "'currentColor'",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "stroke": {
+        "description": "Stroke width",
+        "required": false,
+        "defaultValue": {
+          "value": "2",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "className": {
+        "description": "Often used with CSS to style elements with common properties",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "style": {
+        "description": "Inline style",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "any"
+        }
+      },
+      "id": {
+        "description": "Unique ID to identify this component in Dash callbacks.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "setProps": {
+        "description": "Update props to trigger callbacks.",
+        "required": true,
+        "type": {
+          "name": "func",
+          "raw": "(props: Record<string, any>) => void"
+        }
+      }
+    },
+    "isContext": false
+  },
+  "src/ts/components/IconSun.tsx": {
+    "displayName": "IconSun",
+    "description": "",
+    "props": {
+      "size": {
+        "description": "Icon size",
+        "required": false,
+        "defaultValue": {
+          "value": "24",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "color": {
+        "description": "Icon color",
+        "required": false,
+        "defaultValue": {
+          "value": "'currentColor'",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "stroke": {
+        "description": "Stroke width",
+        "required": false,
+        "defaultValue": {
+          "value": "2",
+          "computed": false
+        },
+        "type": {
+          "name": "shape",
+          "value": {},
+          "raw": "SVGAttributes<SVGElement>"
+        }
+      },
+      "className": {
+        "description": "Often used with CSS to style elements with common properties",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "style": {
+        "description": "Inline style",
+        "required": false,
+        "type": {
+          "name": "any",
+          "raw": "any"
+        }
+      },
+      "id": {
+        "description": "Unique ID to identify this component in Dash callbacks.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "setProps": {
+        "description": "Update props to trigger callbacks.",
+        "required": true,
+        "type": {
+          "name": "func",
+          "raw": "(props: Record<string, any>) => void"
+        }
+      }
+    },
+    "isContext": false
   }
 }
