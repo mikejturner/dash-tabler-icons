@@ -1,12 +1,11 @@
 import dash_tabler_icons as dti
-from dash import Dash, callback, html, Input, Output
+from dash import Dash, html
 
 app = Dash(__name__)
 
 app.layout = html.Div([
-    dti.IconBrandAmazon(size=16),
+    dti.IconGhost(size=64, color="teal", stroke=2),
 ])
-
 
 
 if __name__ == '__main__':

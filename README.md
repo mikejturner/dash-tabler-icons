@@ -1,15 +1,60 @@
 # Dash Tabler Icons
 
-Dash Tabler Icons is a Dash component library.
+*Dash Tabler Icons* is a [Dash](https://dash.plotly.com/) component library containing 2900+ icons from the [Tabler Icon Set](https://tabler-icons.io/).
 
-Get started with:
-1. Install Dash and its dependencies: https://dash.plotly.com/installation
-2. Run `python usage.py`
-3. Visit http://localhost:8050 in your web browser
+## Getting Started
+
+1. Install [Dash](https://dash.plotly.com/),
+
+```
+$ python -m pip install dash
+```
+
+2. Install dash-tabler-icons,
+
+```
+$ python -m pip install 'dash-tabler-icons @ git+https://github.com/mikejturner/dash-tabler-icons'
+```
+
+3. Create a file call *app.py* with the following example code,
+
+```python
+import dash_tabler_icons as dti
+from dash import Dash, html
+
+app = Dash(__name__)
+
+app.layout = html.Div([
+    dti.IconGhost(size=64, color="teal", stroke=2),
+])
+
+
+if __name__ == '__main__':
+    app.run_server(debug=True)
+```
+
+In the example above:
+
+- The dash_tabler_icons python package is imported as *dti*.
+- A dash app called *app* is created.
+- The app layout is set to a single *div* containing a single icon (ghost) from tabler icons.
+- The ghost icon is styled. It's *size* is set to 24px; it's *color* (stroke-color) is set to teal and it's *stroke* (stroke-width) is set to 2px.
+
+4. Run the example,
+
+```
+$ python app.py
+```
+
+and open the url in the browser. You should see a teal colored ghost:
+
+![Ghost Icon from Dash Example](images/GhostIconFromDashExample.png)
+
+## Getting Help
+
+We use [GitHub issues](https://github.com/mikejturner/dash-tabler-icons/issues) for tracking bugs and feature requests.
 
 ## Contributing
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ### Install dependencies
 
@@ -21,10 +66,10 @@ If you have selected install_dependencies during the prompt, you can skip this p
     ```
 2. Create a virtual env and activate.
     ```
-    $ virtualenv venv
-    $ . venv/bin/activate
+    $ python -m venv myvenv
+    $ source myvenv/bin/activate
     ```
-    _Note: venv\Scripts\activate for windows_
+    _Note: myvenv\Scripts\activate for windows_
 
 3. Install python packages required to build components.
     ```
@@ -35,62 +80,20 @@ If you have selected install_dependencies during the prompt, you can skip this p
     $ pip install -r tests/requirements.txt
     ```
 
-### Write your component code in `src/lib/components/DashTablerIcons.react.js`.
+### Build dash-tabler-icons:
 
-- The demo app is in `src/demo` and you will import your example component code into your demo app.
-- Test your code in a Python environment:
-    1. Build your code
-        ```
-        $ npm run build
-        ```
-    2. Run and modify the `usage.py` sample dash app:
-        ```
-        $ python usage.py
-        ```
-- Write tests for your component.
-    - A sample test is available in `tests/test_usage.py`, it will load `usage.py` and you can then automate interactions with selenium.
-    - Run the tests with `$ pytest tests`.
-    - The Dash team uses these types of integration tests extensively. Browse the Dash component code on GitHub for more examples of testing (e.g. https://github.com/plotly/dash-core-components)
-- Add custom styles to your component by putting your custom CSS files into your distribution folder (`dash_tabler_icons`).
-    - Make sure that they are referenced in `MANIFEST.in` so that they get properly included when you're ready to publish your component.
-    - Make sure the stylesheets are added to the `_css_dist` dict in `dash_tabler_icons/__init__.py` so dash will serve them automatically when the component suite is requested.
-- [Review your code](./review_checklist.md)
+1. Generate the .tsx icon files.
+    ```
+    $ node scripts/generate.js
+    ```
 
-### Create a production build and publish:
+> The above command assumes you have node installed globally. 
 
-1. Build your code:
+This commands generates a .tsx file for each icon in the Tabler Icon set. The tsx files are placed in the directory `src/ts/components`.
+
+> The `scripts/generate.js` file uses the javascript package [template-file](https://www.npmjs.com/package/template-file) and the `scripts/generate.js` along with the `scripts/icon.tsx.template` file to generated these file. It also generates the file `src/ts/index/ts` using the `scripts/index.ts.template` file.
+
+2. Build your code:
     ```
     $ npm run build
     ```
-2. Create a Python distribution
-    ```
-    $ python setup.py sdist bdist_wheel
-    ```
-    This will create source and wheel distribution in the generated the `dist/` folder.
-    See [PyPA](https://packaging.python.org/guides/distributing-packages-using-setuptools/#packaging-your-project)
-    for more information.
-
-3. Test your tarball by copying it into a new environment and installing it locally:
-    ```
-    $ pip install dash_tabler_icons-0.0.1.tar.gz
-    ```
-
-4. If it works, then you can publish the component to NPM and PyPI:
-    1. Publish on PyPI
-        ```
-        $ twine upload dist/*
-        ```
-    2. Cleanup the dist folder (optional)
-        ```
-        $ rm -rf dist
-        ```
-    3. Publish on NPM (Optional if chosen False in `publish_on_npm`)
-        ```
-        $ npm publish
-        ```
-        _Publishing your component to NPM will make the JavaScript bundles available on the unpkg CDN. By default, Dash serves the component library's CSS and JS locally, but if you choose to publish the package to NPM you can set `serve_locally` to `False` and you may see faster load times._
-
-5. Share your component with the community! https://community.plotly.com/c/dash
-    1. Publish this repository to GitHub
-    2. Tag your GitHub repository with the plotly-dash tag so that it appears here: https://github.com/topics/plotly-dash
-    3. Create a post in the Dash community forum: https://community.plotly.com/c/dash
