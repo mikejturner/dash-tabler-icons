@@ -1,5 +1,24 @@
 # Dash Tabler Icons
 
+> Deprecation Warning
+>
+> This repository has been deprecated and is no longer maintained.
+>
+> A better alternative is [Dash Iconify](https://github.com/snehilvj/dash-iconify) which supports many more icon sets, including the *tabler* icons.
+>
+> Replace
+> ```py
+> import dash-tabler-icons as dti
+> settings_icon = dti.IconSettings(size=16)
+> ```
+>
+> with
+>
+> ```py
+> from dash_iconify import DashIconify
+> settings_icon = DashIconify(icon="tabler:settings", width=16)
+> ```
+
 *Dash Tabler Icons* is a [Dash](https://dash.plotly.com/) component library containing 2900+ icons from the [Tabler Icon Set](https://tabler-icons.io/).
 
 ## Getting Started
